@@ -10,7 +10,8 @@ import SwiftUI
 // selection fails with Binding
 //
 struct AlbumPickerView2: View {
-    @Binding var selection: String?
+    @State var selection: String?
+//    @Binding var selection: String?
     var albumNames: [String]
     
 //    @EnvironmentObject var app: AppModel
@@ -46,7 +47,7 @@ struct AlbumPickerHost2: View {
     @State var albumNames = ["apple", "banana", "cherry"]
     var body: some View {
 //        Text("Hello")
-        AlbumPickerView2(selection: $selection, albumNames: albumNames)
+        AlbumPickerView2(selection: selection, albumNames: albumNames)
     }
 }
 #Preview {
